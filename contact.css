@@ -1,0 +1,232 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+/* En-tête spécifique pour Contact */
+#contact {
+  background: linear-gradient(45deg, #FF0080, #6B4EFF);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#contact h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact input, #contact textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#contact button {
+  background-color: #FF0080;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact button:hover {
+  background-color: #6B4EFF;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 15px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #ff9900;
+}
+
+/* Section */
+section {
+  padding: 60px 0;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+
+/* Section contact */
+
+#contact {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: #FF0080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #6B4EFF;
+}
+
+#form-message {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left img {
+    max-width: 150px;
+  }
+  
+  .footer-center {
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
+  .footer-right ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-right li {
+    margin: 5px 0;
+  }
+  
+  .footer-right a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-right a:hover {
+    color: #FFC300;
+  }
+
+  
+/* Mobile */
+@media (max-width: 768px) {
+    .grille-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .banniere h1 {
+        font-size: 28px;
+    }
+}

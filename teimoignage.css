@@ -1,0 +1,236 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+
+/* En-tête spécifique pour Témoignages */
+#temoignage {
+  background: linear-gradient(45deg, #FF0080, #6B4EFF);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+#temoignage h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#temoignage blockquote {
+  font-style: italic;
+  color: #555;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  padding: 15px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navbar ul li a:hover {
+  color: #ff9900;
+}
+
+/* Section */
+section {
+  padding: 60px 0;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#temoignage blockquote {
+  font-size: 1.3rem;
+  margin: 20px auto;
+  width: 80%;
+}
+
+
+/* Styles pour la section Témoignages */
+#temoignages {
+    background-color: #f5f5f5;
+    padding: 50px 20px;
+  }
+  
+  #temoignages h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .temoignages-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .temoignages-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .temoignage {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  
+  .temoignage p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .temoignage h4 {
+    font-size: 1.2rem;
+    color: #FF0080;
+    margin-bottom: 5px;
+  }
+  
+  .temoignage p:last-child {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .cta {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .cta p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .btn-cta {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #FF0080, #6B4EFF);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-cta:hover {
+    background: linear-gradient(45deg, #6B4EFF, #FF0080);
+  }
+  
+  
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left img {
+    max-width: 150px;
+  }
+  
+  .footer-center {
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
+  .footer-right ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-right li {
+    margin: 5px 0;
+  }
+  
+  .footer-right a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-right a:hover {
+    color: #FFC300;
+  }
+
+
+  
+/* Mobile */
+@media (max-width: 768px) {
+    .grille-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .banniere h1 {
+        font-size: 28px;
+    }
+}

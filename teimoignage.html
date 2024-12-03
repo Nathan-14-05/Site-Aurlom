@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Témoignages - Aurlom</title>
+  <link rel="stylesheet" href="teimoignage.css">
+  
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <nav class="navbar">
+    <ul>
+        <li><a href="http://localhost/aurlom.html">Accueil</a></li>
+        <li><a href="http://localhost/formation.html">Formation</a></li>
+        <li><a href="http://localhost/teimoignage.html">Temoignage</a></li>
+        <li><a href="http://localhost/contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+  <!-- Section Témoignage -->
+  <section id="temoignages">
+    <h2>Nos Témoignages</h2>
+    <div class="temoignages-container">
+      <div class="temoignages-slider">
+        <div class="temoignage">
+          <p>"Aurlom a transformé ma vie professionnelle. Grâce à leur programme de formation en BTS SIO, j'ai acquis des compétences pratiques qui m'ont permis de décrocher un emploi dans une entreprise de renom."</p>
+          <h4>Lucie D.</h4>
+          <p>BTS SIO</p>
+        </div>
+        <div class="temoignage">
+          <p>"Le programme en BTS NDRC m'a donné les clés pour réussir dans le commerce et la négociation. Les cours sont concrets et les formateurs sont à l'écoute de nos besoins."</p>
+          <h4>Marc T.</h4>
+          <p>BTS NDRC</p>
+        </div>
+        <div class="temoignage">
+          <p>"Je ne pensais pas qu'un BTS MCO pouvait être aussi enrichissant. Les enseignements sont très pratiques et m'ont permis de prendre des responsabilités dans une entreprise dès ma sortie."</p>
+          <h4>Sophie L.</h4>
+          <p>BTS MCO</p>
+        </div>
+        <div class="temoignage">
+          <p>"Une formation complète et bien structurée. J'ai appris énormément dans le domaine du commerce international grâce au BTS CI d'Aurlom. Je suis désormais responsable export dans une grande entreprise."</p>
+          <h4>Thomas F.</h4>
+          <p>BTS CI</p>
+        </div>
+        <div class="temoignage">
+          <p>"Je recommande vivement le BTS Photographie d'Aurlom. C'est une formation très complète et créative qui m'a permis de développer mes compétences photographiques et d'ouvrir mon propre studio."</p>
+          <h4>Chloé B.</h4>
+          <p>BTS Photographie</p>
+        </div>
+        <div class="temoignage">
+          <p>"Le BTS CIEL m'a apporté toutes les compétences nécessaires pour comprendre le fonctionnement du commerce international. Grâce à cette formation, j'ai trouvé mon premier poste dans une entreprise de logistique."</p>
+          <h4>Antoine M.</h4>
+          <p>BTS CIEL</p>
+        </div>
+        <div class="temoignage">
+          <p>"Le programme de formation est très structuré et les formateurs sont expérimentés. J'ai beaucoup appris au sein d'Aurlom et j'ai décroché un job dans un domaine qui me passionne."</p>
+          <h4>Caroline P.</h4>
+          <p>BTS MCO</p>
+        </div>
+        <div class="temoignage">
+          <p>"J'ai adoré la méthode d'enseignement d'Aurlom. Les études de cas pratiques m'ont permis de me plonger directement dans le monde professionnel. Aujourd'hui, je travaille en tant que chef de projet."</p>
+          <h4>Julien K.</h4>
+          <p>BTS SIO</p>
+        </div>
+        <div class="temoignage">
+          <p>"Les formations proposées sont adaptées aux besoins du marché. Grâce à mon BTS NDRC, je suis maintenant responsable de la relation client dans une entreprise leader dans son secteur."</p>
+          <h4>Elena G.</h4>
+          <p>BTS NDRC</p>
+        </div>
+        <div class="temoignage">
+          <p>"Le BTS CI m'a donné les bases solides pour travailler dans le secteur du commerce international. Je recommande vivement cette formation pour ceux qui veulent travailler à l'étranger."</p>
+          <h4>Paul V.</h4>
+          <p>BTS CI</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="cta">
+      <p>Vous souhaitez rejoindre Aurlom et suivre une formation qui vous prépare au monde professionnel ? Rejoignez-nous et donnez un nouvel élan à votre carrière !</p>
+      <a href="http://localhost/contact.html" class="btn-cta">Rejoindre Aurlom</a>
+    </div>
+  </section>
+
+  <script>
+    const slider = document.querySelector('.temoignages-slider');
+    let currentIndex = 0;
+  
+    function nextTestimonial() {
+      const testimonials = document.querySelectorAll('.temoignage');
+      const totalTestimonials = testimonials.length;
+      
+      // Si on est au dernier témoignage, on revient au premier après un petit délai pour éviter le "blanc"
+      if (currentIndex === totalTestimonials - 1) {
+        setTimeout(() => {
+          currentIndex = 0; // Revenir au premier témoignage après un délai
+          updateSliderPosition();
+        }, 500); // Délai pour éviter un blanc
+      } else {
+        currentIndex++;
+        updateSliderPosition();
+      }
+    }
+  
+    function updateSliderPosition() {
+      const width = document.querySelector('.temoignage').offsetWidth + 40; // 40px de marge
+      slider.style.transition = "transform 0.5s ease"; // Transition fluide
+      slider.style.transform = `translateX(-${currentIndex * width}px)`;
+    }
+  
+    setInterval(nextTestimonial, 5000); // Auto-défiler tous les 5 secondes
+  </script>
+  
+  
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="logo-aurlom.png" alt="Logo d'Aurlom">
+      </div>
+      <div class="footer-center">
+        <p>© 2024 Aurlom Inspired. Tous droits réservés</p>
+        <p>"Le choix du succès"</p>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

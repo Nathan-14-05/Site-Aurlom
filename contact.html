@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Aurlom</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <!-- Barre de navigation -->
+  <nav class="navbar">
+    <ul>
+        <li><a href="http://localhost/aurlom.html">Accueil</a></li>
+        <li><a href="http://localhost/formation.html">Formation</a></li>
+        <li><a href="http://localhost/teimoignage.html">Temoignage</a></li>
+        <li><a href="http://localhost/contact.html">Contact</a></li>
+      </ul>
+  </nav>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <form id="contact-form" action="" method="POST">
+        <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom">
+        </div>
+        <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required placeholder="Votre email">
+        </div>
+        <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" required placeholder="Votre message"></textarea>
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+    <div id="form-message"></div>
+</section>
+
+
+  <!-- Enregistrement des données du formulaire dans le locale storage -->
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    // Empêche l'envoi du formulaire afin de ne pas recharger la page
+    event.preventDefault();
+
+    // Récupérer les valeurs des champs du formulaire à partir de leurs ID
+    const name = document.getElementById('name').value; // Récupère le nom
+    const email = document.getElementById('email').value; // Récupère l'email
+    const message = document.getElementById('message').value; // Récupère le message
+
+    // Validation des champs : vérifier si l'un des champs est vide
+    if (name === '' || email === '' || message === '') {
+        // Si un des champs est vide, afficher un message d'erreur
+        document.getElementById('form-message').innerHTML = '<p style="color: red;">Tous les champs sont requis.</p>';
+        return; // Arrête l'exécution du script pour éviter l'envoi des données
+    }
+
+    // Créer un objet JavaScript contenant les données du formulaire
+    const formData = {
+        name: name, // Ajoute le nom à l'objet
+        email: email, // Ajoute l'email à l'objet
+        message: message // Ajoute le message à l'objet
+    };
+
+    // Récupère les données déjà stockées dans le localStorage (si elles existent) et les convertit en tableau
+    const contactData = JSON.parse(localStorage.getItem('contactData')) || [];
+    // Ajouter le nouvel objet formData dans le tableau contactData
+    contactData.push(formData);
+    // Stocker à nouveau le tableau mis à jour dans le localStorage sous la clé 'contactData'
+    localStorage.setItem('contactData', JSON.stringify(contactData));
+
+    // Afficher un message de succès indiquant que le formulaire a été envoyé correctement
+    document.getElementById('form-message').innerHTML = '<p style="color: green;">Merci, votre message a été envoyé avec succès.</p>';
+
+    // Réinitialiser le formulaire, c'est-à-dire vider tous les champs du formulaire
+    document.getElementById('contact-form').reset();
+});
+    </script>
+    
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="logo-aurlom.png" alt="Logo d'Aurlom">
+      </div>
+      <div class="footer-center">
+        <p>© 2024 Aurlom Inspired. Tous droits réservés</p>
+        <p>"Le choix du succès"</p>
+      </div>
+      <div class="footer-right">
+        <ul>
+          <li><a href="#">Politique de confidentialité</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
